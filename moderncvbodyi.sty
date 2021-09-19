@@ -69,7 +69,7 @@
   \par\addvspace{2.5ex}%
   \phantomsection{}% reset the anchor for hyperrefs
   \addcontentsline{toc}{section}{#2}%
-  \cvitem[0ex]{\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{\hintscolumnwidth}{0.95ex}}}{\strut\sectionstyle{#2}}%
+  \cvitem[0ex]{\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{\hintscolumnwidth}{0.5ex}}}{\strut\sectionstyle{#2}}%
   \par\nobreak\addvspace{1ex}\@afterheading}% to avoid a pagebreak after the heading
 
 \RenewDocumentCommand{\subsection}{sm}{%
@@ -164,7 +164,7 @@
   \ifthenelse{\isundefined{\@enclosure}}{}{%
     \\%
     \vfil%
-    {\color{color2}\itshape\enclname: \@enclosure}}%
+    {\color{color1}\itshape\enclname: \@enclosure}}%
     \vfil}
 
 
