@@ -32,7 +32,7 @@
 % lengths
 \@initializelength{\footwidth}%
 \renewcommand*{\recomputefootlengths}{%
-  \setlength{\footwidth}{0.8\textwidth}}
+  \setlength{\footwidth}{\textwidth}}
 
 % commands
 %   internal command to add an element to the footer
@@ -81,6 +81,7 @@
         \centering%
         \color{color2}\addressfont%
         \vspace{\baselineskip}% forces a white line to ensure space between main text and footer (as footer height can't be known in advance)
+		\ifthenelse{\isundefined{\@firstname~\@lastname}}{}{\addtofoot{\@firstname~\@lastname}}%
         \ifthenelse{\isundefined{\@addressstreet}}{}{\addtofoot[]{\addresssymbol\@addressstreet}%
           \ifthenelse{\equal{\@addresscity}{}}{}{\addtofoot[~--~]{\@addresscity}}% if \addresstreet is defined, \addresscity and \addresscountry will always be defined but could be empty
           \ifthenelse{\equal{\@addresscountry}{}}{}{\addtofoot[~--~]{\@addresscountry}}%
